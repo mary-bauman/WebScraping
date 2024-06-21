@@ -1,0 +1,2 @@
+Web Scraping = Extracting data from web content
+
