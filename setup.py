@@ -7,3 +7,6 @@ html_doc = """<html><head><title>The Dormouse's story</title></head>
 
 soup = BeautifulSoup(html_doc)
 print(soup.title)
+
+response = requests.get('https://www.google.com')
+print(response.text)
