@@ -20,11 +20,11 @@ mw = soup.find(class_="mw-default-size")
 # for child in mw.children:
 #     print("\nchild")
 #     print(child)
-# descendants = list(mw.descendants)
+descendants = list(mw.descendants)
 # print(f"for all {len(descendants)} descendants")
 # for d in descendants:
 #     print(d, "\n")
-# parents = list(mw.parents)
+parents = list(mw.parents)
 # print(f"for all {len(parents)} parents:\n")
 # for p in parents: print(p, "\n")
 
@@ -33,9 +33,9 @@ mw = soup.find(class_="mw-default-size")
 # titles = soup.find_all(['title', 'h1', 'h2'])
 # print("\nTitles")
 # for t in titles: print(t.text)
-# firstTitle = soup.find(['title', 'h1', 'h2'])
-# nextSibling = firstTitle.next_sibling
-# #note that floating whitespace is considered a sibling
+firstTitle = soup.find(['title', 'h1', 'h2'])
+nextSibling = firstTitle.next_sibling
+#note that floating whitespace is considered a sibling
 # print(f"{firstTitle.text} and {nextSibling.text} are siblings")
-# nextSibling = nextSibling.next_sibling
+nextSibling = nextSibling.next_sibling
 # print(f"{nextSibling.text} is the next sibling")
