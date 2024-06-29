@@ -16,9 +16,14 @@ mw = soup.find(class_="mw-default-size")
 # print(mw.text)
 # print(mw.contents)
 # print(mw.attrs)
-for child in mw.children:
-    print("\nchild")
-    print(child)
+# print(f"for all {len(mw)} children")
+# for child in mw.children:
+#     print("\nchild")
+#     print(child)
+descendants = list(mw.descendants)
+print(f"for all {len(descendants)} descendants")
+for d in descendants:
+    print(d, "\n")
 
 
 # titles = soup.find_all(['title', 'h1', 'h2'])
