@@ -5,14 +5,10 @@ response = requests.get('https://en.wikipedia.org/wiki/2048_(video_game)')
 soup = BeautifulSoup(response.text, 'html.parser')
 
 #text of top level heading (h1)
-h1 = soup.find('h1')
-print(h1.text)
+print(soup.h1.text)
 
 #how many second level headings (h2)
-h2s = soup.find_all('h2')
-print(len(h2s))
-
+print(len(soup.find_all('h2')))
 
 #extract href of first link on page
-firstLink = soup.find('a')['href']
-print(firstLink)
+print(soup.a['href'])
